@@ -38,9 +38,9 @@ Weights live in each scenario JSON:
 
 ```json
 "weights": {
-  "individual": 0.5,
-  "operator": 0.3,
-  "overall": 0.2
+  "individual": 1,
+  "operator": 1,
+  "overall": 1
 }
 ```
 
