@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scenario",
+  "type": "object",
+  "required": ["scenario_id", "average_speed_kmph", "routes", "stations", "buses", "weights"],
+  "properties": {
+    "scenario_id": { "type": "string" },
+    "name": { "type": "string" },
+    "average_speed_kmph": { "type": "number", "exclusiveMinimum": 0 },
+    "routes": {
+      "type": "array",
+      "items": { "$ref": "route.schema.json" }
+    },
+    "stations": {
+      "type": "array",
+      "items": { "$ref": "station.schema.json" }
+    },
+    "buses": {
+      "type": "array",
+      "items": { "$ref": "bus.schema.json" }
+    },
+    "weights": { "$ref": "weights.schema.json" },
+    "scheduler": {
+      "type": "object",
+      "properties": {
+        "strategy": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}

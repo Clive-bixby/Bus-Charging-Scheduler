@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Station",
+  "type": "object",
+  "required": ["station_id", "is_scheduling_station", "charger_count", "default_charge_minutes"],
+  "properties": {
+    "station_id": { "type": "string" },
+    "is_scheduling_station": { "type": "boolean" },
+    "charger_count": { "type": "integer", "minimum": 0 },
+    "default_charge_minutes": { "type": "number", "exclusiveMinimum": 0 },
+    "outage_windows": { "type": "array", "items": { "type": "object" } },
+    "pricing": { "type": "object" },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}

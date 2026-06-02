@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bus-charging-scheduler"
+version = "0.1.0"
+description = "Config-driven discrete event simulation for electric bus charging schedules."
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2",
+  "streamlit>=1.35",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bus",
+  "type": "object",
+  "required": ["bus_id", "operator_id", "route_id", "battery_range_km"],
+  "anyOf": [
+    { "required": ["departure_minute"] },
+    { "required": ["departure_time"] }
+  ],
+  "properties": {
+    "bus_id": { "type": "string" },
+    "operator_id": { "type": "string" },
+    "route_id": { "type": "string" },
+    "departure_minute": { "type": "number", "minimum": 0 },
+    "departure_time": { "type": "string", "pattern": "^[0-2][0-9]:[0-5][0-9]$" },
+    "direction": { "type": "string" },
+    "battery_range_km": { "type": "number", "exclusiveMinimum": 0 },
+    "initial_charge_km": { "type": "number", "exclusiveMinimum": 0 },
+    "priority": { "type": "number", "exclusiveMinimum": 0 },
+    "driver_shift": { "type": ["object", "null"] },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": true
+}

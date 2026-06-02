@@ -1,0 +1,39 @@
+{
+  "scenario_id": "scenario_2_bunched_start",
+  "name": "Scenario 2 - Bunched start",
+  "average_speed_kmph": 60,
+  "routes": [
+    { "route_id": "bengaluru_kochi", "name": "Bengaluru to Kochi", "ordered_stops": ["Bengaluru", "A", "B", "C", "D", "Kochi"], "segments": [ { "from": "Bengaluru", "to": "A", "distance_km": 100 }, { "from": "A", "to": "B", "distance_km": 120 }, { "from": "B", "to": "C", "distance_km": 100 }, { "from": "C", "to": "D", "distance_km": 120 }, { "from": "D", "to": "Kochi", "distance_km": 100 } ] },
+    { "route_id": "kochi_bengaluru", "name": "Kochi to Bengaluru", "ordered_stops": ["Kochi", "D", "C", "B", "A", "Bengaluru"], "segments": [ { "from": "Kochi", "to": "D", "distance_km": 100 }, { "from": "D", "to": "C", "distance_km": 120 }, { "from": "C", "to": "B", "distance_km": 100 }, { "from": "B", "to": "A", "distance_km": 120 }, { "from": "A", "to": "Bengaluru", "distance_km": 100 } ] }
+  ],
+  "stations": [
+    { "station_id": "A", "is_scheduling_station": true, "charger_count": 1, "default_charge_minutes": 25, "outage_windows": [], "pricing": {} },
+    { "station_id": "B", "is_scheduling_station": true, "charger_count": 1, "default_charge_minutes": 25, "outage_windows": [], "pricing": {} },
+    { "station_id": "C", "is_scheduling_station": true, "charger_count": 1, "default_charge_minutes": 25, "outage_windows": [], "pricing": {} },
+    { "station_id": "D", "is_scheduling_station": true, "charger_count": 1, "default_charge_minutes": 25, "outage_windows": [], "pricing": {} }
+  ],
+  "buses": [
+    { "bus_id": "bus-BK-01", "operator_id": "kpn", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:00", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-02", "operator_id": "freshbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:08", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-03", "operator_id": "flixbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:16", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-04", "operator_id": "kpn", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:24", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-05", "operator_id": "freshbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:32", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-06", "operator_id": "flixbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:40", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-07", "operator_id": "kpn", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "19:48", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-08", "operator_id": "freshbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "20:03", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-09", "operator_id": "flixbus", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "20:18", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-BK-10", "operator_id": "kpn", "direction": "Bengaluru to Kochi", "route_id": "bengaluru_kochi", "departure_time": "20:33", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-01", "operator_id": "freshbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:00", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-02", "operator_id": "flixbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:08", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-03", "operator_id": "kpn", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:16", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-04", "operator_id": "freshbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:24", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-05", "operator_id": "flixbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:32", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-06", "operator_id": "kpn", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:40", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-07", "operator_id": "freshbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "19:48", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-08", "operator_id": "flixbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "20:03", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-09", "operator_id": "kpn", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "20:18", "battery_range_km": 240, "initial_charge_km": 240 },
+    { "bus_id": "bus-KB-10", "operator_id": "freshbus", "direction": "Kochi to Bengaluru", "route_id": "kochi_bengaluru", "departure_time": "20:33", "battery_range_km": 240, "initial_charge_km": 240 }
+  ],
+  "weights": { "individual": 1.0, "operator": 1.0, "overall": 1.0 },
+  "scheduler": { "strategy": "greedy_weighted" }
+}

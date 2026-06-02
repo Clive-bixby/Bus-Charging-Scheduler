@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scheduler Output",
+  "type": "object",
+  "required": ["scenario_id", "bus_timelines", "station_charging_orders", "summary_metrics", "rule_violations"],
+  "properties": {
+    "scenario_id": { "type": "string" },
+    "bus_timelines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bus_id", "operator_id", "event", "station_id", "time_minute", "battery_km"],
+        "additionalProperties": true
+      }
+    },
+    "station_charging_orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["station_id", "charger_id", "order", "bus_id", "operator_id", "charge_start_minute", "charge_end_minute"],
+        "additionalProperties": true
+      }
+    },
+    "summary_metrics": { "type": "object" },
+    "rule_violations": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": true
+}

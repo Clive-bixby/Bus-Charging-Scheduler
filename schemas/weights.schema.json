@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Weights",
+  "type": "object",
+  "required": ["individual", "operator", "overall"],
+  "properties": {
+    "individual": { "type": "number", "minimum": 0 },
+    "operator": { "type": "number", "minimum": 0 },
+    "overall": { "type": "number", "minimum": 0 }
+  },
+  "additionalProperties": false
+}
